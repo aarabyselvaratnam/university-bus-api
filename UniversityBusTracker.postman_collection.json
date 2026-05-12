@@ -1,0 +1,324 @@
+{
+  "info": {
+    "_postman_id": "46c3a8bc-ec60-4c62-8ccc-2150c6703109",
+    "name": "University Bus Tracker",
+    "description": "The **University Bus Tracker** API collection provides a set of endpoints for managing and querying university bus schedules and fleet information.\n\nIt covers the following operations:\n\n- **Route Management** – Retrieve all available bus routes serving the university.\n    \n- **Schedule Queries** – Fetch bus schedules filtered by direction, including buses heading to the university and buses departing from it.\n    \n- **Bus Management** – Create, update, and delete bus entries in the system.\n    \n\nThis collection is intended for developers building or testing a university transportation system, enabling full control over bus data and real-time schedule lookups.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "53920760",
+    "_collection_link": "https://go.postman.co/collection/53920760-46c3a8bc-ec60-4c62-8ccc-2150c6703109?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Get All Routes",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/routes",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "routes"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Buses To University",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/schedules?direction=toUniversity",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "schedules"
+          ],
+          "query": [
+            {
+              "key": "direction",
+              "value": "toUniversity"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Buses From University",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/schedules?direction=fromUniversity",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "schedules"
+          ],
+          "query": [
+            {
+              "key": "direction",
+              "value": "fromUniversity"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Bus",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"busName\": \"Vavuniya - Arabathnagar (7:00)\",\r\n  \"origin\": \"Vavuniya\",\r\n  \"destination\": \"Arabathnagar\",\r\n  \"type\": \"private\",\r\n  \"route\": \"69ff5cb707cd2989094dc3ac\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/buses",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "buses"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Bus",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"type\": \"government\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/buses/6a031cf9847a7972b1e01c81",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "buses",
+            "6a031cf9847a7972b1e01c81"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Bus",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/buses/6a031cf9847a7972b1e01c81",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "buses",
+            "6a031cf9847a7972b1e01c81"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Schedule",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"bus\": \"69ff5cb707cd2989094dc3ae\",\r\n  \"departureTime\": \"05:00\",\r\n  \"stopTimes\": [\r\n    { \"stop\": \"Kurumankadu\", \"time\": \"05:10\" },\r\n    { \"stop\": \"Veppankulam\", \"time\": \"05:20\" },\r\n    { \"stop\": \"Nelukkulam\", \"time\": \"05:25\" },\r\n    { \"stop\": \"Pampaimadu Junction\", \"time\": \"05:35\" },\r\n    { \"stop\": \"University of Vavuniya\", \"time\": \"05:40\" }\r\n  ],\r\n  \"daysOperating\": [\"Monday\", \"Tuesday\", \"Wednesday\", \"Thursday\", \"Friday\"],\r\n  \"status\": \"on-time\",\r\n  \"remarks\": \"Early morning special service\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/schedules",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "schedules"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Schedule",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"status\": \"delayed\",\r\n  \"remarks\": \"Delayed due to road work\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/schedules/6a031ddd847a7972b1e01c82",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "schedules",
+            "6a031ddd847a7972b1e01c82"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Schedule",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/schedules/6a031ddd847a7972b1e01c82",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "schedules",
+            "6a031ddd847a7972b1e01c82"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Route",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"routeName\": \"Vavuniya to Cheddikulam Direct\",\r\n  \"direction\": \"toUniversity\",\r\n  \"stops\": [\r\n    \"Vavuniya New Bus Stand\",\r\n    \"Cheddikulam\",\r\n    \"University of Vavuniya\"\r\n  ],\r\n  \"description\": \"Direct route from Vavuniya to Cheddikulam\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/routes",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "routes"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Route",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"description\": \"Updated test route\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/routes/6a031be7847a7972b1e01c80",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "routes",
+            "6a031be7847a7972b1e01c80"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Route",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/routes/6a031be7847a7972b1e01c80",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "routes",
+            "6a031be7847a7972b1e01c80"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

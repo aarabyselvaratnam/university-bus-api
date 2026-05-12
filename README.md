@@ -32,6 +32,21 @@ __________________________________________
 
 university-bus-tracker/
 |
+|--client/                  
+|  |--src/
+|  |  |--components/
+|  |  |  |--Navbar.jsx
+|  |  |--pages/
+|  |  |  |--Home.jsx
+|  |  |  |--MorningBuses.jsx
+|  |  |  |--EveningBuses.jsx
+|  |  |  |--AdminPanel.jsx
+|  |  |  |--Login.jsx
+|  |  |--App.jsx
+|  |  |--index.css
+|  |--index.html
+|  |--package.json
+|
 |--controllers/
 |  |--routeController.js
 |  |--busController.js
@@ -53,7 +68,7 @@ university-bus-tracker/
 |--package.json
 |--server.js
 
-## **Setup Instructions**
+## **Setup Instructions** - *packages and backend*
 
 1. Clone the repository
 
@@ -84,6 +99,34 @@ university-bus-tracker/
 
     npm run dev
     **Server runs at: `http://localhost:5000`**
+
+
+**Setup Instructions** - *Front End*
+
+1. Open a new terminal and navigate to the client folder
+
+    cd client
+
+2. Install frontend dependencies
+
+    npm install
+
+3. Start the React development server
+
+    npm run dev
+
+4. Open browser and go to
+
+    http://localhost:5173
+    
+    *Pages Available*
+
+    | Home           | /        | Landing page with directions Button   |
+    | Morning buses  | /morning | Buses from Vavuniya to University     |
+    | Evening  buses | /evening | Mannar side buses to Vavuniya         |
+    | Admin Panel    | /admin   | Update Bus Status(Password Protected) |
+
+  
 
 ## **API Endpoints**
 
