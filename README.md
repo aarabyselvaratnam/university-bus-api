@@ -156,51 +156,7 @@ university-bus-tracker/
     | PUT    | /api/schedules/:id                         | Update a schedule         |
     | DELETE | /api/schedules/:id                         | Delete a schedule         |
 
- ## **Sample API Requests**
 
-1)   //Create a Route (POST /api/routes)
-
-{
-  "routeName": "Vavuniya Town to University",
-  "direction": "toUniversity",
-  "stops": [
-    "Vavuniya New Bus Stand",
-    "Kurumankadu",
-    "Paddanichoor",
-    "Veppankulam",
-    "Nelukkulam",
-    "Pampaimadu Junction",
-    "University of Vavuniya"
-  ],
-  "description": "Morning route from Vavuniya town to university"
-}
-
-
-2) //Create a Schedule (POST /api/schedules)
-
-{
-  "bus": "<bus_id>",
-  "departureTime": "07:30",
-  "stopTimes": [
-    { "stop": "Vavuniya New Bus Stand", "time": "07:30" },
-    { "stop": "Kurumankadu", "time": "07:40" },
-    { "stop": "Veppankulam", "time": "07:50" },
-    { "stop": "Nelukkulam", "time": "07:55" },
-    { "stop": "Pampaimadu Junction", "time": "08:05" },
-    { "stop": "University of Vavuniya", "time": "08:10" }
-  ],
-  "daysOperating": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-  "status": "on-time",
-  "remarks": "Government bus via Mannar route"
-}
-
-
-3) Mark a Bus as Delayed (PUT /api/schedules/:id)
-
-{
-  "status": "delayed",
-  "remarks": "Delayed by 15 minutes due to road work near Nelukkulam"
-}
 
 ## **Routes Covered** : *Sample data*
 
