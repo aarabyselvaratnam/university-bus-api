@@ -6,6 +6,7 @@ require('dotenv').config();
 const routeRoutes = require('./routes/routeRoutes');
 const busRoutes = require('./routes/busRoutes');
 const scheduleRoutes = require('./routes/scheduleRoutes');
+const authRoutes = require('./routes/authRoutes');
 
 const app = express();
 
@@ -17,6 +18,7 @@ app.use(express.json());
 app.use('/api/routes', routeRoutes);
 app.use('/api/buses', busRoutes);
 app.use('/api/schedules', scheduleRoutes);
+app.use('/api/auth', authRoutes);
 
 app.get('/', (req, res) => {
   res.json({
@@ -25,6 +27,7 @@ app.get('/', (req, res) => {
       routes: '/api/routes',
       buses: '/api/buses',
       schedules: '/api/schedules',
+      auth: '/api/auth',
     },
   });
 });

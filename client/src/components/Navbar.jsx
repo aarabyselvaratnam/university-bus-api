@@ -38,7 +38,7 @@ function Navbar() {
 
 const styles = {
   nav: {
-    backgroundColor: '#1a1a2e',
+    backgroundColor: '#1a2456',
     padding: '15px 40px',
     display: 'flex',
     justifyContent: 'space-between',
@@ -54,7 +54,7 @@ const styles = {
     gap: '4px',
   },
   brand: {
-    color: '#e94560',
+    color: '#d4af37',
     fontSize: '22px',
     fontWeight: 'bold',
     letterSpacing: '1px',
@@ -73,29 +73,28 @@ const styles = {
     fontSize: '15px',
     padding: '8px 15px',
     borderRadius: '5px',
-    transition: 'all 0.2s ease',
   },
   activeLink: {
-    color: '#ffffff',
+    color: '#1a2456',
     fontSize: '15px',
     padding: '8px 15px',
     borderRadius: '5px',
-    backgroundColor: '#e94560',
+    backgroundColor: '#d4af37',
     fontWeight: 'bold',
   },
   adminLink: {
-    color: '#ffc107',
+    color: '#d4af37',
     fontSize: '15px',
     padding: '8px 15px',
     borderRadius: '5px',
-    border: '1px solid #ffc107',
+    border: '1px solid #d4af37',
   },
   activeAdminLink: {
-    color: '#1a1a2e',
+    color: '#1a2456',
     fontSize: '15px',
     padding: '8px 15px',
     borderRadius: '5px',
-    backgroundColor: '#ffc107',
+    backgroundColor: '#d4af37',
     fontWeight: 'bold',
   },
 };

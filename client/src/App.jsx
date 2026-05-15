@@ -6,9 +6,10 @@ import MorningBuses from './pages/MorningBuses';
 import EveningBuses from './pages/EveningBuses';
 import AdminPanel from './pages/AdminPanel';
 import Login from './pages/Login';
+import Register from './pages/Register';
 
 function App() {
-  const [isAdminLoggedIn, setIsAdminLoggedIn] = useState(false);
+  const [token, setToken] = useState(null);
 
   return (
     <BrowserRouter>
@@ -17,12 +18,13 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/morning" element={<MorningBuses />} />
         <Route path="/evening" element={<EveningBuses />} />
+        <Route path="/register" element={<Register />} />
         <Route
           path="/admin"
           element={
-            isAdminLoggedIn
-              ? <AdminPanel onLogout={() => setIsAdminLoggedIn(false)} />
-              : <Login onLogin={() => setIsAdminLoggedIn(true)} />
+            token
+              ? <AdminPanel token={token} onLogout={() => setToken(null)} />
+              : <Login onLogin={(t) => setToken(t)} />
           }
         />
       </Routes>

@@ -7,8 +7,9 @@ const {
   updateBus,
   deleteBus,
 } = require('../controllers/busController');
+const { protect } = require('../middleware/auth');
 
-router.route('/').get(getAllBuses).post(createBus);
-router.route('/:id').get(getBusById).put(updateBus).delete(deleteBus);
+router.route('/').get(getAllBuses).post(protect, createBus);
+router.route('/:id').get(getBusById).put(protect, updateBus).delete(protect, deleteBus);
 
 module.exports = router;
