@@ -99,7 +99,7 @@ university-bus-tracker/
         PORT=5000
         MONGO_URI=mongodb://localhost:27017/universityBusDB
         JWT_SECRET=universitybustracker2026secret
-        ADMIN_CODE=your_secret_admin_code_here
+        ADMIN_CODE=UOVADMIN2026
 
 4. Start MongoDB
 

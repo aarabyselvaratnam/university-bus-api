@@ -26,7 +26,70 @@
           ]
         }
       },
-      "response": []
+      "response": [
+        {
+          "name": "Get All Routes",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/routes",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "routes"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "http://localhost:5173"
+            },
+            {
+              "key": "Vary",
+              "value": "Origin"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "927"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"39f-pPWCeyHFvL374x0tQP4Mp2cTd/I\""
+            },
+            {
+              "key": "Date",
+              "value": "Sat, 16 May 2026 06:50:34 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"count\": 2,\n    \"data\": [\n        {\n            \"_id\": \"6a080fb27b7c67b744adfacb\",\n            \"routeName\": \"Vavuniya Town to University\",\n            \"direction\": \"toUniversity\",\n            \"stops\": [\n                \"Vavuniya New Bus Stand\",\n                \"Kurumankadu\",\n                \"Paddanichoor\",\n                \"Veppankulam\",\n                \"Nelukkulam\",\n                \"Pampaimadu Junction\",\n                \"University of Vavuniya\"\n            ],\n            \"description\": \"Morning route from Vavuniya town to University of Vavuniya\",\n            \"createdAt\": \"2026-05-16T06:33:22.028Z\",\n            \"updatedAt\": \"2026-05-16T06:33:22.028Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6a080fb27b7c67b744adfacc\",\n            \"routeName\": \"Mannar Side to Vavuniya Town via University\",\n            \"direction\": \"fromUniversity\",\n            \"stops\": [\n                \"Mannar\",\n                \"Chekkadipulavu\",\n                \"Poovarasankulam\",\n                \"Salambaikulam\",\n                \"University of Vavuniya\",\n                \"Pampaimadu Junction\",\n                \"Nelukkulam\",\n                \"Veppankulam\",\n                \"Paddanichoor\",\n                \"Kurumankadu\",\n                \"Vavuniya New Bus Stand\"\n            ],\n            \"description\": \"Evening route from Mannar side passing university to Vavuniya town\",\n            \"createdAt\": \"2026-05-16T06:33:22.031Z\",\n            \"updatedAt\": \"2026-05-16T06:33:22.031Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+        }
+      ]
     },
     {
       "name": "Get Buses To University",
@@ -52,7 +115,76 @@
           ]
         }
       },
-      "response": []
+      "response": [
+        {
+          "name": "Get Buses To University",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/schedules?direction=toUniversity",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "schedules"
+              ],
+              "query": [
+                {
+                  "key": "direction",
+                  "value": "toUniversity"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "http://localhost:5173"
+            },
+            {
+              "key": "Vary",
+              "value": "Origin"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "16992"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"4260-sBAwGrY4c3WGr0Ij5vnAst2LEv8\""
+            },
+            {
+              "key": "Date",
+              "value": "Sat, 16 May 2026 06:50:26 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"count\": 15,\n    \"data\": [\n        {\n            \"_id\": \"6a080fb27b7c67b744adfae4\",\n            \"bus\": {\n                \"_id\": \"6a080fb27b7c67b744adfacd\",\n                \"busName\": \"Vavuniya - Mannar (6:15)\",\n                \"origin\": \"Vavuniya\",\n                \"destination\": \"Mannar\",\n                \"type\": \"private\",\n                \"route\": {\n                    \"_id\": \"6a080fb27b7c67b744adfacb\",\n                    \"routeName\": \"Vavuniya Town to University\",\n                    \"direction\": \"toUniversity\",\n                    \"stops\": [\n                        \"Vavuniya New Bus Stand\",\n                        \"Kurumankadu\",\n                        \"Paddanichoor\",\n                        \"Veppankulam\",\n                        \"Nelukkulam\",\n                        \"Pampaimadu Junction\",\n                        \"University of Vavuniya\"\n                    ]\n                },\n                \"isActive\": true,\n                \"__v\": 0,\n                \"createdAt\": \"2026-05-16T06:33:22.036Z\",\n                \"updatedAt\": \"2026-05-16T06:33:22.036Z\"\n            },\n            \"departureTime\": \"06:15\",\n            \"stopTimes\": [\n                {\n                    \"stop\": \"Kurumankadu\",\n                    \"time\": \"06:25\",\n                    \"_id\": \"6a080fb27b7c67b744adfae5\"\n                },\n                {\n                    \"stop\": \"Veppankulam\",\n                    \"time\": \"06:35\",\n                    \"_id\": \"6a080fb27b7c67b744adfae6\"\n                },\n                {\n                    \"stop\": \"Nelukkulam\",\n                    \"time\": \"06:40\",\n                    \"_id\": \"6a080fb27b7c67b744adfae7\"\n                },\n                {\n                    \"stop\": \"Pampaimadu Junction\",\n                    \"time\": \"06:50\",\n                    \"_id\": \"6a080fb27b7c67b744adfae8\"\n                },\n                {\n                    \"stop\": \"University of Vavuniya\",\n                    \"time\": \"06:55\",\n                    \"_id\": \"6a080fb27b7c67b744adfae9\"\n                }\n            ],\n            \"daysOperating\": [\n                \"Monday\",\n                \"Tuesday\",\n                \"Wednesday\",\n                \"Thursday\",\n                \"Friday\"\n            ],\n            \"status\": \"on-time\",\n            \"remarks\": \"\",\n            \"__v\": 0,\n            \"createdAt\": \"2026-05-16T06:33:22.056Z\",\n            \"updatedAt\": \"2026-05-16T06:33:22.056Z\"\n        },\n        {\n            \"_id\": \"6a080fb27b7c67b744adfaea\",\n            \"bus\": {\n                \"_id\": \"6a080fb27b7c67b744adface\",\n                \"busName\": \"Vavuniya - Poovarasankulam (6:40)\",\n                \"origin\": \"Vavuniya\",\n                \"destination\": \"Poovarasankulam\",\n                \"type\": \"government\",\n                \"route\": {\n                    \"_id\": \"6a080fb27b7c67b744adfacb\",\n                    \"routeName\": \"Vavuniya Town to University\",\n                    \"direction\": \"toUniversity\",\n                    \"stops\": [\n                        \"Vavuniya New Bus Stand\",\n                        \"Kurumankadu\",\n                        \"Paddanichoor\",\n                        \"Veppankulam\",\n                        \"Nelukkulam\",\n                        \"Pampaimadu Junction\",\n                        \"University of Vavuniya\"\n                    ]\n                },\n                \"isActive\": true,\n                \"__v\": 0,\n                \"createdAt\": \"2026-05-16T06:33:22.036Z\",\n                \"updatedAt\": \"2026-05-16T06:33:22.036Z\"\n            },\n            \"departureTime\": \"06:40\",\n            \"stopTimes\": [\n                {\n                    \"stop\": \"Kurumankadu\",\n                    \"time\": \"06:50\",\n                    \"_id\": \"6a080fb27b7c67b744adfaeb\"\n                },\n                {\n                    \"stop\": \"Veppankulam\",\n                    \"time\": \"07:00\",\n                    \"_id\": \"6a080fb27b7c67b744adfaec\"\n                },\n                {\n                    \"stop\": \"Nelukkulam\",\n                    \"time\": \"07:05\",\n                    \"_id\": \"6a080fb27b7c67b744adfaed\"\n                },\n                {\n                    \"stop\": \"Pampaimadu Junction\",\n                    \"time\": \"07:15\",\n                    \"_id\": \"6a080fb27b7c67b744adfaee\"\n                },\n                {\n                    \"stop\": \"University of Vavuniya\",\n                    \"time\": \"07:20\",\n                    \"_id\": \"6a080fb27b7c67b744adfaef\"\n                }\n            ],\n            \"daysOperating\": [\n                \"Monday\",\n                \"Tuesday\",\n                \"Wednesday\",\n                \"Thursday\",\n                \"Friday\"\n            ],\n            \"status\": \"on-time\",\n            \"remarks\": \"\",\n            \"__v\": 0,\n            \"createdAt\": \"2026-05-16T06:33:22.056Z\",\n            \"updatedAt\": \"2026-05-16T06:33:22.056Z\"\n        },\n        {\n            \"_id\": \"6a080fb27b7c67b744adfaf0\",\n            \"bus\": {\n                \"_id\": \"6a080fb27b7c67b744adfacf\",\n                \"busName\": \"Vavuniya - Veppankulam (7:00)\",\n                \"origin\": \"Vavuniya\",\n                \"destination\": \"Veppankulam\",\n                \"type\": \"private\",\n                \"route\": {\n                    \"_id\": \"6a080fb27b7c67b744adfacb\",\n                    \"routeName\": \"Vavuniya Town to University\",\n                    \"direction\": \"toUniversity\",\n                    \"stops\": [\n                        \"Vavuniya New Bus Stand\",\n                        \"Kurumankadu\",\n                        \"Paddanichoor\",\n                        \"Veppankulam\",\n                        \"Nelukkulam\",\n                        \"Pampaimadu Junction\",\n                        \"University of Vavuniya\"\n                    ]\n                },\n                \"isActive\": true,\n                \"__v\": 0,\n                \"createdAt\": \"2026-05-16T06:33:22.036Z\",\n                \"updatedAt\": \"2026-05-16T06:33:22.036Z\"\n            },\n            \"departureTime\": \"07:00\",\n            \"stopTimes\": [\n                {\n                    \"stop\": \"Kurumankadu\",\n                    \"time\": \"07:15\",\n                    \"_id\": \"6a080fb27b7c67b744adfaf1\"\n                },\n                {\n                    \"stop\": \"Veppankulam\",\n                    \"time\": \"07:25\",\n                    \"_id\": \"6a080fb27b7c67b744adfaf2\"\n                },\n                {\n                    \"stop\": \"Nelukkulam\",\n                    \"time\": \"07:30\",\n                    \"_id\": \"6a080fb27b7c67b744adfaf3\"\n                },\n                {\n                    \"stop\": \"Pampaimadu Junction\",\n                    \"time\": \"07:40\",\n                    \"_id\": \"6a080fb27b7c67b744adfaf4\"\n                },\n                {\n                    \"stop\": \"University of Vavuniya\",\n                    \"time\": \"07:45\",\n                    \"_id\": \"6a080fb27b7c67b744adfaf5\"\n                }\n            ],\n            \"daysOperating\": [\n                \"Monday\",\n                \"Tuesday\",\n                \"Wednesday\",\n                \"Thursday\",\n                \"Friday\"\n            ],\n            \"status\": \"on-time\",\n            \"remarks\": \"\",\n            \"__v\": 0,\n            \"createdAt\": \"2026-05-16T06:33:22.056Z\",\n            \"updatedAt\": \"2026-05-16T06:33:22.056Z\"\n        },\n        {\n            \"_id\": \"6a080fb27b7c67b744adfaf6\",\n            \"bus\": {\n                \"_id\": \"6a080fb27b7c67b744adfad0\",\n                \"busName\": \"Vavuniya - Cheddikulam (7:15)\",\n                \"origin\": \"Vavuniya\",\n                \"destination\": \"Cheddikulam\",\n                \"type\": \"private\",\n                \"route\": {\n                    \"_id\": \"6a080fb27b7c67b744adfacb\",\n                    \"routeName\": \"Vavuniya Town to University\",\n                    \"direction\": \"toUniversity\",\n                    \"stops\": [\n                        \"Vavuniya New Bus Stand\",\n                        \"Kurumankadu\",\n                        \"Paddanichoor\",\n                        \"Veppankulam\",\n                        \"Nelukkulam\",\n                        \"Pampaimadu Junction\",\n                        \"University of Vavuniya\"\n                    ]\n                },\n                \"isActive\": true,\n                \"__v\": 0,\n                \"createdAt\": \"2026-05-16T06:33:22.036Z\",\n                \"updatedAt\": \"2026-05-16T06:33:22.036Z\"\n            },\n            \"departureTime\": \"07:15\",\n            \"stopTimes\": [\n                {\n                    \"stop\": \"Kurumankadu\",\n                    \"time\": \"07:25\",\n                    \"_id\": \"6a080fb27b7c67b744adfaf7\"\n                },\n                {\n                    \"stop\": \"Veppankulam\",\n                    \"time\": \"07:35\",\n                    \"_id\": \"6a080fb27b7c67b744adfaf8\"\n                },\n                {\n                    \"stop\": \"Nelukkulam\",\n                    \"time\": \"07:40\",\n                    \"_id\": \"6a080fb27b7c67b744adfaf9\"\n                },\n                {\n                    \"stop\": \"Pampaimadu Junction\",\n                    \"time\": \"07:50\",\n                    \"_id\": \"6a080fb27b7c67b744adfafa\"\n                },\n                {\n                    \"stop\": \"University of Vavuniya\",\n                    \"time\": \"07:55\",\n                    \"_id\": \"6a080fb27b7c67b744adfafb\"\n                }\n            ],\n            \"daysOperating\": [\n                \"Monday\",\n                \"Tuesday\",\n                \"Wednesday\",\n                \"Thursday\",\n                \"Friday\"\n            ],\n            \"status\": \"on-time\",\n            \"remarks\": \"\",\n            \"__v\": 0,\n            \"createdAt\": \"2026-05-16T06:33:22.056Z\",\n            \"updatedAt\": \"2026-05-16T06:33:22.056Z\"\n        },\n        {\n            \"_id\": \"6a080fb27b7c67b744adfafc\",\n            \"bus\": {\n                \"_id\": \"6a080fb27b7c67b744adfad1\",\n                \"busName\": \"Vavuniya - Mannar (7:30)\",\n                \"origin\": \"Vavuniya\",\n                \"destination\": \"Mannar\",\n                \"type\": \"government\",\n                \"route\": {\n                    \"_id\": \"6a080fb27b7c67b744adfacb\",\n                    \"routeName\": \"Vavuniya Town to University\",\n                    \"direction\": \"toUniversity\",\n                    \"stops\": [\n                        \"Vavuniya New Bus Stand\",\n                        \"Kurumankadu\",\n                        \"Paddanichoor\",\n                        \"Veppankulam\",\n                        \"Nelukkulam\",\n                        \"Pampaimadu Junction\",\n                        \"University of Vavuniya\"\n                    ]\n                },\n                \"isActive\": true,\n                \"__v\": 0,\n                \"createdAt\": \"2026-05-16T06:33:22.036Z\",\n                \"updatedAt\": \"2026-05-16T06:33:22.036Z\"\n            },\n            \"departureTime\": \"07:30\",\n            \"stopTimes\": [\n                {\n                    \"stop\": \"Kurumankadu\",\n                    \"time\": \"07:40\",\n                    \"_id\": \"6a080fb27b7c67b744adfafd\"\n                },\n                {\n                    \"stop\": \"Veppankulam\",\n                    \"time\": \"07:50\",\n                    \"_id\": \"6a080fb27b7c67b744adfafe\"\n                },\n                {\n                    \"stop\": \"Nelukkulam\",\n                    \"time\": \"07:55\",\n                    \"_id\": \"6a080fb27b7c67b744adfaff\"\n                },\n                {\n                    \"stop\": \"Pampaimadu Junction\",\n                    \"time\": \"08:05\",\n                    \"_id\": \"6a080fb27b7c67b744adfb00\"\n                },\n                {\n                    \"stop\": \"University of Vavuniya\",\n                    \"time\": \"08:10\",\n                    \"_id\": \"6a080fb27b7c67b744adfb01\"\n                }\n            ],\n            \"daysOperating\": [\n                \"Monday\",\n                \"Tuesday\",\n                \"Wednesday\",\n                \"Thursday\",\n                \"Friday\"\n            ],\n            \"status\": \"on-time\",\n            \"remarks\": \"\",\n            \"__v\": 0,\n            \"createdAt\": \"2026-05-16T06:33:22.056Z\",\n            \"updatedAt\": \"2026-05-16T06:33:22.056Z\"\n        },\n        {\n            \"_id\": \"6a080fb27b7c67b744adfb02\",\n            \"bus\": {\n                \"_id\": \"6a080fb27b7c67b744adfad2\",\n                \"busName\": \"Vavuniya - Veerapuram (7:45)\",\n                \"origin\": \"Vavuniya\",\n                \"destination\": \"Veerapuram\",\n                \"type\": \"private\",\n                \"route\": {\n                    \"_id\": \"6a080fb27b7c67b744adfacb\",\n                    \"routeName\": \"Vavuniya Town to University\",\n                    \"direction\": \"toUniversity\",\n                    \"stops\": [\n                        \"Vavuniya New Bus Stand\",\n                        \"Kurumankadu\",\n                        \"Paddanichoor\",\n                        \"Veppankulam\",\n                        \"Nelukkulam\",\n                        \"Pampaimadu Junction\",\n                        \"University of Vavuniya\"\n                    ]\n                },\n                \"isActive\": true,\n                \"__v\": 0,\n                \"createdAt\": \"2026-05-16T06:33:22.036Z\",\n                \"updatedAt\": \"2026-05-16T06:33:22.036Z\"\n            },\n            \"departureTime\": \"07:45\",\n            \"stopTimes\": [\n                {\n                    \"stop\": \"Kurumankadu\",\n                    \"time\": \"07:55\",\n                    \"_id\": \"6a080fb27b7c67b744adfb03\"\n                },\n                {\n                    \"stop\": \"Veppankulam\",\n                    \"time\": \"08:05\",\n                    \"_id\": \"6a080fb27b7c67b744adfb04\"\n                },\n                {\n                    \"stop\": \"Nelukkulam\",\n                    \"time\": \"08:10\",\n                    \"_id\": \"6a080fb27b7c67b744adfb05\"\n                },\n                {\n                    \"stop\": \"Pampaimadu Junction\",\n                    \"time\": \"08:20\",\n                    \"_id\": \"6a080fb27b7c67b744adfb06\"\n                },\n                {\n                    \"stop\": \"University of Vavuniya\",\n                    \"time\": \"08:25\",\n                    \"_id\": \"6a080fb27b7c67b744adfb07\"\n                }\n            ],\n            \"daysOperating\": [\n                \"Monday\",\n                \"Tuesday\",\n                \"Wednesday\",\n                \"Thursday\",\n                \"Friday\"\n            ],\n            \"status\": \"on-time\",\n            \"remarks\": \"\",\n            \"__v\": 0,\n            \"createdAt\": \"2026-05-16T06:33:22.056Z\",\n            \"updatedAt\": \"2026-05-16T06:33:22.056Z\"\n        },\n        {\n            \"_id\": \"6a080fb27b7c67b744adfb08\",\n            \"bus\": {\n                \"_id\": \"6a080fb27b7c67b744adfad3\",\n                \"busName\": \"Vavuniya - Mannar (8:00)\",\n                \"origin\": \"Vavuniya\",\n                \"destination\": \"Mannar\",\n                \"type\": \"private\",\n                \"route\": {\n                    \"_id\": \"6a080fb27b7c67b744adfacb\",\n                    \"routeName\": \"Vavuniya Town to University\",\n                    \"direction\": \"toUniversity\",\n                    \"stops\": [\n                        \"Vavuniya New Bus Stand\",\n                        \"Kurumankadu\",\n                        \"Paddanichoor\",\n                        \"Veppankulam\",\n                        \"Nelukkulam\",\n                        \"Pampaimadu Junction\",\n                        \"University of Vavuniya\"\n                    ]\n                },\n                \"isActive\": true,\n                \"__v\": 0,\n                \"createdAt\": \"2026-05-16T06:33:22.036Z\",\n                \"updatedAt\": \"2026-05-16T06:33:22.036Z\"\n            },\n            \"departureTime\": \"08:00\",\n            \"stopTimes\": [\n                {\n                    \"stop\": \"Kurumankadu\",\n                    \"time\": \"08:10\",\n                    \"_id\": \"6a080fb27b7c67b744adfb09\"\n                },\n                {\n                    \"stop\": \"Veppankulam\",\n                    \"time\": \"08:20\",\n                    \"_id\": \"6a080fb27b7c67b744adfb0a\"\n                },\n                {\n                    \"stop\": \"Nelukkulam\",\n                    \"time\": \"08:25\",\n                    \"_id\": \"6a080fb27b7c67b744adfb0b\"\n                },\n                {\n                    \"stop\": \"Pampaimadu Junction\",\n                    \"time\": \"08:35\",\n                    \"_id\": \"6a080fb27b7c67b744adfb0c\"\n                },\n                {\n                    \"stop\": \"University of Vavuniya\",\n                    \"time\": \"08:40\",\n                    \"_id\": \"6a080fb27b7c67b744adfb0d\"\n                }\n            ],\n            \"daysOperating\": [\n                \"Monday\",\n                \"Tuesday\",\n                \"Wednesday\",\n                \"Thursday\",\n                \"Friday\"\n            ],\n            \"status\": \"on-time\",\n            \"remarks\": \"\",\n            \"__v\": 0,\n            \"createdAt\": \"2026-05-16T06:33:22.056Z\",\n            \"updatedAt\": \"2026-05-16T06:33:22.056Z\"\n        },\n        {\n            \"_id\": \"6a080fb27b7c67b744adfb0e\",\n            \"bus\": {\n                \"_id\": \"6a080fb27b7c67b744adfad4\",\n                \"busName\": \"Vavuniya - Cheddikulam (8:20)\",\n                \"origin\": \"Vavuniya\",\n                \"destination\": \"Cheddikulam\",\n                \"type\": \"government\",\n                \"route\": {\n                    \"_id\": \"6a080fb27b7c67b744adfacb\",\n                    \"routeName\": \"Vavuniya Town to University\",\n                    \"direction\": \"toUniversity\",\n                    \"stops\": [\n                        \"Vavuniya New Bus Stand\",\n                        \"Kurumankadu\",\n                        \"Paddanichoor\",\n                        \"Veppankulam\",\n                        \"Nelukkulam\",\n                        \"Pampaimadu Junction\",\n                        \"University of Vavuniya\"\n                    ]\n                },\n                \"isActive\": true,\n                \"__v\": 0,\n                \"createdAt\": \"2026-05-16T06:33:22.036Z\",\n                \"updatedAt\": \"2026-05-16T06:33:22.036Z\"\n            },\n            \"departureTime\": \"08:20\",\n            \"stopTimes\": [\n                {\n                    \"stop\": \"Kurumankadu\",\n                    \"time\": \"08:30\",\n                    \"_id\": \"6a080fb27b7c67b744adfb0f\"\n                },\n                {\n                    \"stop\": \"Veppankulam\",\n                    \"time\": \"08:40\",\n                    \"_id\": \"6a080fb27b7c67b744adfb10\"\n                },\n                {\n                    \"stop\": \"Nelukkulam\",\n                    \"time\": \"08:45\",\n                    \"_id\": \"6a080fb27b7c67b744adfb11\"\n                },\n                {\n                    \"stop\": \"Pampaimadu Junction\",\n                    \"time\": \"08:55\",\n                    \"_id\": \"6a080fb27b7c67b744adfb12\"\n                },\n                {\n                    \"stop\": \"University of Vavuniya\",\n                    \"time\": \"09:00\",\n                    \"_id\": \"6a080fb27b7c67b744adfb13\"\n                }\n            ],\n            \"daysOperating\": [\n                \"Monday\",\n                \"Tuesday\",\n                \"Wednesday\",\n                \"Thursday\",\n                \"Friday\"\n            ],\n            \"status\": \"on-time\",\n            \"remarks\": \"\",\n            \"__v\": 0,\n            \"createdAt\": \"2026-05-16T06:33:22.056Z\",\n            \"updatedAt\": \"2026-05-16T06:33:22.056Z\"\n        },\n        {\n            \"_id\": \"6a080fb27b7c67b744adfb14\",\n            \"bus\": {\n                \"_id\": \"6a080fb27b7c67b744adfad5\",\n                \"busName\": \"Vavuniya - Mannar (8:45)\",\n                \"origin\": \"Vavuniya\",\n                \"destination\": \"Mannar\",\n                \"type\": \"private\",\n                \"route\": {\n                    \"_id\": \"6a080fb27b7c67b744adfacb\",\n                    \"routeName\": \"Vavuniya Town to University\",\n                    \"direction\": \"toUniversity\",\n                    \"stops\": [\n                        \"Vavuniya New Bus Stand\",\n                        \"Kurumankadu\",\n                        \"Paddanichoor\",\n                        \"Veppankulam\",\n                        \"Nelukkulam\",\n                        \"Pampaimadu Junction\",\n                        \"University of Vavuniya\"\n                    ]\n                },\n                \"isActive\": true,\n                \"__v\": 0,\n                \"createdAt\": \"2026-05-16T06:33:22.036Z\",\n                \"updatedAt\": \"2026-05-16T06:33:22.036Z\"\n            },\n            \"departureTime\": \"08:45\",\n            \"stopTimes\": [\n                {\n                    \"stop\": \"Kurumankadu\",\n                    \"time\": \"08:55\",\n                    \"_id\": \"6a080fb27b7c67b744adfb15\"\n                },\n                {\n                    \"stop\": \"Veppankulam\",\n                    \"time\": \"09:05\",\n                    \"_id\": \"6a080fb27b7c67b744adfb16\"\n                },\n                {\n                    \"stop\": \"Nelukkulam\",\n                    \"time\": \"09:10\",\n                    \"_id\": \"6a080fb27b7c67b744adfb17\"\n                },\n                {\n                    \"stop\": \"Pampaimadu Junction\",\n                    \"time\": \"09:20\",\n                    \"_id\": \"6a080fb27b7c67b744adfb18\"\n                },\n                {\n                    \"stop\": \"University of Vavuniya\",\n                    \"time\": \"09:25\",\n                    \"_id\": \"6a080fb27b7c67b744adfb19\"\n                }\n            ],\n            \"daysOperating\": [\n                \"Monday\",\n                \"Tuesday\",\n                \"Wednesday\",\n                \"Thursday\",\n                \"Friday\"\n            ],\n            \"status\": \"on-time\",\n            \"remarks\": \"\",\n            \"__v\": 0,\n            \"createdAt\": \"2026-05-16T06:33:22.056Z\",\n            \"updatedAt\": \"2026-05-16T06:33:22.056Z\"\n        },\n        {\n            \"_id\": \"6a080fb27b7c67b744adfb1a\",\n            \"bus\": {\n                \"_id\": \"6a080fb27b7c67b744adfad6\",\n                \"busName\": \"Vavuniya - Poovarasankulam (9:30)\",\n                \"origin\": \"Vavuniya\",\n                \"destination\": \"Poovarasankulam\",\n                \"type\": \"private\",\n                \"route\": {\n                    \"_id\": \"6a080fb27b7c67b744adfacb\",\n                    \"routeName\": \"Vavuniya Town to University\",\n                    \"direction\": \"toUniversity\",\n                    \"stops\": [\n                        \"Vavuniya New Bus Stand\",\n                        \"Kurumankadu\",\n                        \"Paddanichoor\",\n                        \"Veppankulam\",\n                        \"Nelukkulam\",\n                        \"Pampaimadu Junction\",\n                        \"University of Vavuniya\"\n                    ]\n                },\n                \"isActive\": true,\n                \"__v\": 0,\n                \"createdAt\": \"2026-05-16T06:33:22.036Z\",\n                \"updatedAt\": \"2026-05-16T06:33:22.036Z\"\n            },\n            \"departureTime\": \"09:30\",\n            \"stopTimes\": [\n                {\n                    \"stop\": \"Kurumankadu\",\n                    \"time\": \"09:40\",\n                    \"_id\": \"6a080fb27b7c67b744adfb1b\"\n                },\n                {\n                    \"stop\": \"Veppankulam\",\n                    \"time\": \"09:50\",\n                    \"_id\": \"6a080fb27b7c67b744adfb1c\"\n                },\n                {\n                    \"stop\": \"Nelukkulam\",\n                    \"time\": \"09:55\",\n                    \"_id\": \"6a080fb27b7c67b744adfb1d\"\n                },\n                {\n                    \"stop\": \"Pampaimadu Junction\",\n                    \"time\": \"10:05\",\n                    \"_id\": \"6a080fb27b7c67b744adfb1e\"\n                },\n                {\n                    \"stop\": \"University of Vavuniya\",\n                    \"time\": \"10:10\",\n                    \"_id\": \"6a080fb27b7c67b744adfb1f\"\n                }\n            ],\n            \"daysOperating\": [\n                \"Monday\",\n                \"Tuesday\",\n                \"Wednesday\",\n                \"Thursday\",\n                \"Friday\"\n            ],\n            \"status\": \"on-time\",\n            \"remarks\": \"\",\n            \"__v\": 0,\n            \"createdAt\": \"2026-05-16T06:33:22.056Z\",\n            \"updatedAt\": \"2026-05-16T06:33:22.056Z\"\n        },\n        {\n            \"_id\": \"6a080fb27b7c67b744adfb20\",\n            \"bus\": {\n                \"_id\": \"6a080fb27b7c67b744adfad7\",\n                \"busName\": \"Vavuniya - Mannar (10:30)\",\n                \"origin\": \"Vavuniya\",\n                \"destination\": \"Mannar\",\n                \"type\": \"government\",\n                \"route\": {\n                    \"_id\": \"6a080fb27b7c67b744adfacb\",\n                    \"routeName\": \"Vavuniya Town to University\",\n                    \"direction\": \"toUniversity\",\n                    \"stops\": [\n                        \"Vavuniya New Bus Stand\",\n                        \"Kurumankadu\",\n                        \"Paddanichoor\",\n                        \"Veppankulam\",\n                        \"Nelukkulam\",\n                        \"Pampaimadu Junction\",\n                        \"University of Vavuniya\"\n                    ]\n                },\n                \"isActive\": true,\n                \"__v\": 0,\n                \"createdAt\": \"2026-05-16T06:33:22.036Z\",\n                \"updatedAt\": \"2026-05-16T06:33:22.036Z\"\n            },\n            \"departureTime\": \"10:30\",\n            \"stopTimes\": [\n                {\n                    \"stop\": \"Kurumankadu\",\n                    \"time\": \"10:40\",\n                    \"_id\": \"6a080fb27b7c67b744adfb21\"\n                },\n                {\n                    \"stop\": \"Veppankulam\",\n                    \"time\": \"10:50\",\n                    \"_id\": \"6a080fb27b7c67b744adfb22\"\n                },\n                {\n                    \"stop\": \"Nelukkulam\",\n                    \"time\": \"10:55\",\n                    \"_id\": \"6a080fb27b7c67b744adfb23\"\n                },\n                {\n                    \"stop\": \"Pampaimadu Junction\",\n                    \"time\": \"11:05\",\n                    \"_id\": \"6a080fb27b7c67b744adfb24\"\n                },\n                {\n                    \"stop\": \"University of Vavuniya\",\n                    \"time\": \"11:10\",\n                    \"_id\": \"6a080fb27b7c67b744adfb25\"\n                }\n            ],\n            \"daysOperating\": [\n                \"Monday\",\n                \"Tuesday\",\n                \"Wednesday\",\n                \"Thursday\",\n                \"Friday\"\n            ],\n            \"status\": \"on-time\",\n            \"remarks\": \"\",\n            \"__v\": 0,\n            \"createdAt\": \"2026-05-16T06:33:22.056Z\",\n            \"updatedAt\": \"2026-05-16T06:33:22.056Z\"\n        },\n        {\n            \"_id\": \"6a080fb27b7c67b744adfb26\",\n            \"bus\": {\n                \"_id\": \"6a080fb27b7c67b744adfad8\",\n                \"busName\": \"Vavuniya - Cheddikulam (12:00)\",\n                \"origin\": \"Vavuniya\",\n                \"destination\": \"Cheddikulam\",\n                \"type\": \"private\",\n                \"route\": {\n                    \"_id\": \"6a080fb27b7c67b744adfacb\",\n                    \"routeName\": \"Vavuniya Town to University\",\n                    \"direction\": \"toUniversity\",\n                    \"stops\": [\n                        \"Vavuniya New Bus Stand\",\n                        \"Kurumankadu\",\n                        \"Paddanichoor\",\n                        \"Veppankulam\",\n                        \"Nelukkulam\",\n                        \"Pampaimadu Junction\",\n                        \"University of Vavuniya\"\n                    ]\n                },\n                \"isActive\": true,\n                \"__v\": 0,\n                \"createdAt\": \"2026-05-16T06:33:22.036Z\",\n                \"updatedAt\": \"2026-05-16T06:33:22.036Z\"\n            },\n            \"departureTime\": \"12:00\",\n            \"stopTimes\": [\n                {\n                    \"stop\": \"Kurumankadu\",\n                    \"time\": \"12:10\",\n                    \"_id\": \"6a080fb27b7c67b744adfb27\"\n                },\n                {\n                    \"stop\": \"Veppankulam\",\n                    \"time\": \"12:20\",\n                    \"_id\": \"6a080fb27b7c67b744adfb28\"\n                },\n                {\n                    \"stop\": \"Nelukkulam\",\n                    \"time\": \"12:25\",\n                    \"_id\": \"6a080fb27b7c67b744adfb29\"\n                },\n                {\n                    \"stop\": \"Pampaimadu Junction\",\n                    \"time\": \"12:35\",\n                    \"_id\": \"6a080fb27b7c67b744adfb2a\"\n                },\n                {\n                    \"stop\": \"University of Vavuniya\",\n                    \"time\": \"12:40\",\n                    \"_id\": \"6a080fb27b7c67b744adfb2b\"\n                }\n            ],\n            \"daysOperating\": [\n                \"Monday\",\n                \"Tuesday\",\n                \"Wednesday\",\n                \"Thursday\",\n                \"Friday\"\n            ],\n            \"status\": \"on-time\",\n            \"remarks\": \"\",\n            \"__v\": 0,\n            \"createdAt\": \"2026-05-16T06:33:22.056Z\",\n            \"updatedAt\": \"2026-05-16T06:33:22.056Z\"\n        },\n        {\n            \"_id\": \"6a080fb27b7c67b744adfb2c\",\n            \"bus\": {\n                \"_id\": \"6a080fb27b7c67b744adfad9\",\n                \"busName\": \"Vavuniya - Mannar (1:30)\",\n                \"origin\": \"Vavuniya\",\n                \"destination\": \"Mannar\",\n                \"type\": \"government\",\n                \"route\": {\n                    \"_id\": \"6a080fb27b7c67b744adfacb\",\n                    \"routeName\": \"Vavuniya Town to University\",\n                    \"direction\": \"toUniversity\",\n                    \"stops\": [\n                        \"Vavuniya New Bus Stand\",\n                        \"Kurumankadu\",\n                        \"Paddanichoor\",\n                        \"Veppankulam\",\n                        \"Nelukkulam\",\n                        \"Pampaimadu Junction\",\n                        \"University of Vavuniya\"\n                    ]\n                },\n                \"isActive\": true,\n                \"__v\": 0,\n                \"createdAt\": \"2026-05-16T06:33:22.036Z\",\n                \"updatedAt\": \"2026-05-16T06:33:22.036Z\"\n            },\n            \"departureTime\": \"13:30\",\n            \"stopTimes\": [\n                {\n                    \"stop\": \"Kurumankadu\",\n                    \"time\": \"13:40\",\n                    \"_id\": \"6a080fb27b7c67b744adfb2d\"\n                },\n                {\n                    \"stop\": \"Veppankulam\",\n                    \"time\": \"13:50\",\n                    \"_id\": \"6a080fb27b7c67b744adfb2e\"\n                },\n                {\n                    \"stop\": \"Nelukkulam\",\n                    \"time\": \"13:55\",\n                    \"_id\": \"6a080fb27b7c67b744adfb2f\"\n                },\n                {\n                    \"stop\": \"Pampaimadu Junction\",\n                    \"time\": \"14:05\",\n                    \"_id\": \"6a080fb27b7c67b744adfb30\"\n                },\n                {\n                    \"stop\": \"University of Vavuniya\",\n                    \"time\": \"14:10\",\n                    \"_id\": \"6a080fb27b7c67b744adfb31\"\n                }\n            ],\n            \"daysOperating\": [\n                \"Monday\",\n                \"Tuesday\",\n                \"Wednesday\",\n                \"Thursday\",\n                \"Friday\"\n            ],\n            \"status\": \"on-time\",\n            \"remarks\": \"\",\n            \"__v\": 0,\n            \"createdAt\": \"2026-05-16T06:33:22.056Z\",\n            \"updatedAt\": \"2026-05-16T06:33:22.056Z\"\n        },\n        {\n            \"_id\": \"6a080fb27b7c67b744adfb32\",\n            \"bus\": {\n                \"_id\": \"6a080fb27b7c67b744adfada\",\n                \"busName\": \"Vavuniya - Veppankulam (2:30)\",\n                \"origin\": \"Vavuniya\",\n                \"destination\": \"Veppankulam\",\n                \"type\": \"private\",\n                \"route\": {\n                    \"_id\": \"6a080fb27b7c67b744adfacb\",\n                    \"routeName\": \"Vavuniya Town to University\",\n                    \"direction\": \"toUniversity\",\n                    \"stops\": [\n                        \"Vavuniya New Bus Stand\",\n                        \"Kurumankadu\",\n                        \"Paddanichoor\",\n                        \"Veppankulam\",\n                        \"Nelukkulam\",\n                        \"Pampaimadu Junction\",\n                        \"University of Vavuniya\"\n                    ]\n                },\n                \"isActive\": true,\n                \"__v\": 0,\n                \"createdAt\": \"2026-05-16T06:33:22.036Z\",\n                \"updatedAt\": \"2026-05-16T06:33:22.036Z\"\n            },\n            \"departureTime\": \"14:30\",\n            \"stopTimes\": [\n                {\n                    \"stop\": \"Kurumankadu\",\n                    \"time\": \"14:40\",\n                    \"_id\": \"6a080fb27b7c67b744adfb33\"\n                },\n                {\n                    \"stop\": \"Veppankulam\",\n                    \"time\": \"14:50\",\n                    \"_id\": \"6a080fb27b7c67b744adfb34\"\n                },\n                {\n                    \"stop\": \"Nelukkulam\",\n                    \"time\": \"14:55\",\n                    \"_id\": \"6a080fb27b7c67b744adfb35\"\n                },\n                {\n                    \"stop\": \"Pampaimadu Junction\",\n                    \"time\": \"15:05\",\n                    \"_id\": \"6a080fb27b7c67b744adfb36\"\n                },\n                {\n                    \"stop\": \"University of Vavuniya\",\n                    \"time\": \"15:10\",\n                    \"_id\": \"6a080fb27b7c67b744adfb37\"\n                }\n            ],\n            \"daysOperating\": [\n                \"Monday\",\n                \"Tuesday\",\n                \"Wednesday\",\n                \"Thursday\",\n                \"Friday\"\n            ],\n            \"status\": \"on-time\",\n            \"remarks\": \"\",\n            \"__v\": 0,\n            \"createdAt\": \"2026-05-16T06:33:22.057Z\",\n            \"updatedAt\": \"2026-05-16T06:33:22.057Z\"\n        },\n        {\n            \"_id\": \"6a080fb27b7c67b744adfb38\",\n            \"bus\": {\n                \"_id\": \"6a080fb27b7c67b744adfadb\",\n                \"busName\": \"Vavuniya - Mannar (3:15)\",\n                \"origin\": \"Vavuniya\",\n                \"destination\": \"Mannar\",\n                \"type\": \"private\",\n                \"route\": {\n                    \"_id\": \"6a080fb27b7c67b744adfacb\",\n                    \"routeName\": \"Vavuniya Town to University\",\n                    \"direction\": \"toUniversity\",\n                    \"stops\": [\n                        \"Vavuniya New Bus Stand\",\n                        \"Kurumankadu\",\n                        \"Paddanichoor\",\n                        \"Veppankulam\",\n                        \"Nelukkulam\",\n                        \"Pampaimadu Junction\",\n                        \"University of Vavuniya\"\n                    ]\n                },\n                \"isActive\": true,\n                \"__v\": 0,\n                \"createdAt\": \"2026-05-16T06:33:22.036Z\",\n                \"updatedAt\": \"2026-05-16T06:33:22.036Z\"\n            },\n            \"departureTime\": \"15:15\",\n            \"stopTimes\": [\n                {\n                    \"stop\": \"Kurumankadu\",\n                    \"time\": \"15:25\",\n                    \"_id\": \"6a080fb27b7c67b744adfb39\"\n                },\n                {\n                    \"stop\": \"Veppankulam\",\n                    \"time\": \"15:35\",\n                    \"_id\": \"6a080fb27b7c67b744adfb3a\"\n                },\n                {\n                    \"stop\": \"Nelukkulam\",\n                    \"time\": \"15:40\",\n                    \"_id\": \"6a080fb27b7c67b744adfb3b\"\n                },\n                {\n                    \"stop\": \"Pampaimadu Junction\",\n                    \"time\": \"15:50\",\n                    \"_id\": \"6a080fb27b7c67b744adfb3c\"\n                },\n                {\n                    \"stop\": \"University of Vavuniya\",\n                    \"time\": \"15:55\",\n                    \"_id\": \"6a080fb27b7c67b744adfb3d\"\n                }\n            ],\n            \"daysOperating\": [\n                \"Monday\",\n                \"Tuesday\",\n                \"Wednesday\",\n                \"Thursday\",\n                \"Friday\"\n            ],\n            \"status\": \"on-time\",\n            \"remarks\": \"\",\n            \"__v\": 0,\n            \"createdAt\": \"2026-05-16T06:33:22.057Z\",\n            \"updatedAt\": \"2026-05-16T06:33:22.057Z\"\n        }\n    ]\n}"
+        }
+      ]
     },
     {
       "name": "Get Buses From University",
@@ -78,7 +210,76 @@
           ]
         }
       },
-      "response": []
+      "response": [
+        {
+          "name": "Get Buses From University",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/schedules?direction=fromUniversity",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "schedules"
+              ],
+              "query": [
+                {
+                  "key": "direction",
+                  "value": "fromUniversity"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "http://localhost:5173"
+            },
+            {
+              "key": "Vary",
+              "value": "Origin"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "10360"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"2878-dtaE856B96KzdrQFliYG3ChetDk\""
+            },
+            {
+              "key": "Date",
+              "value": "Sat, 16 May 2026 06:50:38 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"count\": 8,\n    \"data\": [\n        {\n            \"_id\": \"6a080fb27b7c67b744adfb3e\",\n            \"bus\": {\n                \"_id\": \"6a080fb27b7c67b744adfadc\",\n                \"busName\": \"Mannar - Vavuniya (2:30)\",\n                \"origin\": \"Mannar\",\n                \"destination\": \"Vavuniya\",\n                \"type\": \"private\",\n                \"route\": {\n                    \"_id\": \"6a080fb27b7c67b744adfacc\",\n                    \"routeName\": \"Mannar Side to Vavuniya Town via University\",\n                    \"direction\": \"fromUniversity\",\n                    \"stops\": [\n                        \"Mannar\",\n                        \"Chekkadipulavu\",\n                        \"Poovarasankulam\",\n                        \"Salambaikulam\",\n                        \"University of Vavuniya\",\n                        \"Pampaimadu Junction\",\n                        \"Nelukkulam\",\n                        \"Veppankulam\",\n                        \"Paddanichoor\",\n                        \"Kurumankadu\",\n                        \"Vavuniya New Bus Stand\"\n                    ]\n                },\n                \"isActive\": true,\n                \"__v\": 0,\n                \"createdAt\": \"2026-05-16T06:33:22.041Z\",\n                \"updatedAt\": \"2026-05-16T06:33:22.041Z\"\n            },\n            \"departureTime\": \"14:30\",\n            \"stopTimes\": [\n                {\n                    \"stop\": \"University of Vavuniya\",\n                    \"time\": \"14:30\",\n                    \"_id\": \"6a080fb27b7c67b744adfb3f\"\n                },\n                {\n                    \"stop\": \"Pampaimadu Junction\",\n                    \"time\": \"14:35\",\n                    \"_id\": \"6a080fb27b7c67b744adfb40\"\n                },\n                {\n                    \"stop\": \"Nelukkulam\",\n                    \"time\": \"14:40\",\n                    \"_id\": \"6a080fb27b7c67b744adfb41\"\n                },\n                {\n                    \"stop\": \"Veppankulam\",\n                    \"time\": \"14:45\",\n                    \"_id\": \"6a080fb27b7c67b744adfb42\"\n                },\n                {\n                    \"stop\": \"Kurumankadu\",\n                    \"time\": \"14:55\",\n                    \"_id\": \"6a080fb27b7c67b744adfb43\"\n                },\n                {\n                    \"stop\": \"Vavuniya New Bus Stand\",\n                    \"time\": \"15:00\",\n                    \"_id\": \"6a080fb27b7c67b744adfb44\"\n                }\n            ],\n            \"daysOperating\": [\n                \"Monday\",\n                \"Tuesday\",\n                \"Wednesday\",\n                \"Thursday\",\n                \"Friday\"\n            ],\n            \"status\": \"on-time\",\n            \"remarks\": \"\",\n            \"__v\": 0,\n            \"createdAt\": \"2026-05-16T06:33:22.057Z\",\n            \"updatedAt\": \"2026-05-16T06:33:22.057Z\"\n        },\n        {\n            \"_id\": \"6a080fb27b7c67b744adfb45\",\n            \"bus\": {\n                \"_id\": \"6a080fb27b7c67b744adfadd\",\n                \"busName\": \"Poovarasankulam - Vavuniya (2:50)\",\n                \"origin\": \"Poovarasankulam\",\n                \"destination\": \"Vavuniya\",\n                \"type\": \"government\",\n                \"route\": {\n                    \"_id\": \"6a080fb27b7c67b744adfacc\",\n                    \"routeName\": \"Mannar Side to Vavuniya Town via University\",\n                    \"direction\": \"fromUniversity\",\n                    \"stops\": [\n                        \"Mannar\",\n                        \"Chekkadipulavu\",\n                        \"Poovarasankulam\",\n                        \"Salambaikulam\",\n                        \"University of Vavuniya\",\n                        \"Pampaimadu Junction\",\n                        \"Nelukkulam\",\n                        \"Veppankulam\",\n                        \"Paddanichoor\",\n                        \"Kurumankadu\",\n                        \"Vavuniya New Bus Stand\"\n                    ]\n                },\n                \"isActive\": true,\n                \"__v\": 0,\n                \"createdAt\": \"2026-05-16T06:33:22.041Z\",\n                \"updatedAt\": \"2026-05-16T06:33:22.041Z\"\n            },\n            \"departureTime\": \"14:50\",\n            \"stopTimes\": [\n                {\n                    \"stop\": \"University of Vavuniya\",\n                    \"time\": \"14:50\",\n                    \"_id\": \"6a080fb27b7c67b744adfb46\"\n                },\n                {\n                    \"stop\": \"Pampaimadu Junction\",\n                    \"time\": \"14:55\",\n                    \"_id\": \"6a080fb27b7c67b744adfb47\"\n                },\n                {\n                    \"stop\": \"Nelukkulam\",\n                    \"time\": \"15:00\",\n                    \"_id\": \"6a080fb27b7c67b744adfb48\"\n                },\n                {\n                    \"stop\": \"Veppankulam\",\n                    \"time\": \"15:05\",\n                    \"_id\": \"6a080fb27b7c67b744adfb49\"\n                },\n                {\n                    \"stop\": \"Kurumankadu\",\n                    \"time\": \"15:15\",\n                    \"_id\": \"6a080fb27b7c67b744adfb4a\"\n                },\n                {\n                    \"stop\": \"Vavuniya New Bus Stand\",\n                    \"time\": \"15:20\",\n                    \"_id\": \"6a080fb27b7c67b744adfb4b\"\n                }\n            ],\n            \"daysOperating\": [\n                \"Monday\",\n                \"Tuesday\",\n                \"Wednesday\",\n                \"Thursday\",\n                \"Friday\"\n            ],\n            \"status\": \"on-time\",\n            \"remarks\": \"\",\n            \"__v\": 0,\n            \"createdAt\": \"2026-05-16T06:33:22.057Z\",\n            \"updatedAt\": \"2026-05-16T06:33:22.057Z\"\n        },\n        {\n            \"_id\": \"6a080fb27b7c67b744adfb4c\",\n            \"bus\": {\n                \"_id\": \"6a080fb27b7c67b744adfade\",\n                \"busName\": \"Cheddikulam - Vavuniya (3:15)\",\n                \"origin\": \"Cheddikulam\",\n                \"destination\": \"Vavuniya\",\n                \"type\": \"private\",\n                \"route\": {\n                    \"_id\": \"6a080fb27b7c67b744adfacc\",\n                    \"routeName\": \"Mannar Side to Vavuniya Town via University\",\n                    \"direction\": \"fromUniversity\",\n                    \"stops\": [\n                        \"Mannar\",\n                        \"Chekkadipulavu\",\n                        \"Poovarasankulam\",\n                        \"Salambaikulam\",\n                        \"University of Vavuniya\",\n                        \"Pampaimadu Junction\",\n                        \"Nelukkulam\",\n                        \"Veppankulam\",\n                        \"Paddanichoor\",\n                        \"Kurumankadu\",\n                        \"Vavuniya New Bus Stand\"\n                    ]\n                },\n                \"isActive\": true,\n                \"__v\": 0,\n                \"createdAt\": \"2026-05-16T06:33:22.041Z\",\n                \"updatedAt\": \"2026-05-16T06:33:22.041Z\"\n            },\n            \"departureTime\": \"15:15\",\n            \"stopTimes\": [\n                {\n                    \"stop\": \"University of Vavuniya\",\n                    \"time\": \"15:15\",\n                    \"_id\": \"6a080fb27b7c67b744adfb4d\"\n                },\n                {\n                    \"stop\": \"Pampaimadu Junction\",\n                    \"time\": \"15:20\",\n                    \"_id\": \"6a080fb27b7c67b744adfb4e\"\n                },\n                {\n                    \"stop\": \"Nelukkulam\",\n                    \"time\": \"15:25\",\n                    \"_id\": \"6a080fb27b7c67b744adfb4f\"\n                },\n                {\n                    \"stop\": \"Veppankulam\",\n                    \"time\": \"15:30\",\n                    \"_id\": \"6a080fb27b7c67b744adfb50\"\n                },\n                {\n                    \"stop\": \"Kurumankadu\",\n                    \"time\": \"15:40\",\n                    \"_id\": \"6a080fb27b7c67b744adfb51\"\n                },\n                {\n                    \"stop\": \"Vavuniya New Bus Stand\",\n                    \"time\": \"15:45\",\n                    \"_id\": \"6a080fb27b7c67b744adfb52\"\n                }\n            ],\n            \"daysOperating\": [\n                \"Monday\",\n                \"Tuesday\",\n                \"Wednesday\",\n                \"Thursday\",\n                \"Friday\"\n            ],\n            \"status\": \"on-time\",\n            \"remarks\": \"\",\n            \"__v\": 0,\n            \"createdAt\": \"2026-05-16T06:33:22.057Z\",\n            \"updatedAt\": \"2026-05-16T06:33:22.057Z\"\n        },\n        {\n            \"_id\": \"6a080fb27b7c67b744adfb53\",\n            \"bus\": {\n                \"_id\": \"6a080fb27b7c67b744adfadf\",\n                \"busName\": \"Mannar - Vavuniya (3:30)\",\n                \"origin\": \"Mannar\",\n                \"destination\": \"Vavuniya\",\n                \"type\": \"government\",\n                \"route\": {\n                    \"_id\": \"6a080fb27b7c67b744adfacc\",\n                    \"routeName\": \"Mannar Side to Vavuniya Town via University\",\n                    \"direction\": \"fromUniversity\",\n                    \"stops\": [\n                        \"Mannar\",\n                        \"Chekkadipulavu\",\n                        \"Poovarasankulam\",\n                        \"Salambaikulam\",\n                        \"University of Vavuniya\",\n                        \"Pampaimadu Junction\",\n                        \"Nelukkulam\",\n                        \"Veppankulam\",\n                        \"Paddanichoor\",\n                        \"Kurumankadu\",\n                        \"Vavuniya New Bus Stand\"\n                    ]\n                },\n                \"isActive\": true,\n                \"__v\": 0,\n                \"createdAt\": \"2026-05-16T06:33:22.041Z\",\n                \"updatedAt\": \"2026-05-16T06:33:22.041Z\"\n            },\n            \"departureTime\": \"15:30\",\n            \"stopTimes\": [\n                {\n                    \"stop\": \"University of Vavuniya\",\n                    \"time\": \"15:30\",\n                    \"_id\": \"6a080fb27b7c67b744adfb54\"\n                },\n                {\n                    \"stop\": \"Pampaimadu Junction\",\n                    \"time\": \"15:35\",\n                    \"_id\": \"6a080fb27b7c67b744adfb55\"\n                },\n                {\n                    \"stop\": \"Nelukkulam\",\n                    \"time\": \"15:40\",\n                    \"_id\": \"6a080fb27b7c67b744adfb56\"\n                },\n                {\n                    \"stop\": \"Veppankulam\",\n                    \"time\": \"15:45\",\n                    \"_id\": \"6a080fb27b7c67b744adfb57\"\n                },\n                {\n                    \"stop\": \"Kurumankadu\",\n                    \"time\": \"15:55\",\n                    \"_id\": \"6a080fb27b7c67b744adfb58\"\n                },\n                {\n                    \"stop\": \"Vavuniya New Bus Stand\",\n                    \"time\": \"16:00\",\n                    \"_id\": \"6a080fb27b7c67b744adfb59\"\n                }\n            ],\n            \"daysOperating\": [\n                \"Monday\",\n                \"Tuesday\",\n                \"Wednesday\",\n                \"Thursday\",\n                \"Friday\"\n            ],\n            \"status\": \"on-time\",\n            \"remarks\": \"\",\n            \"__v\": 0,\n            \"createdAt\": \"2026-05-16T06:33:22.057Z\",\n            \"updatedAt\": \"2026-05-16T06:33:22.057Z\"\n        },\n        {\n            \"_id\": \"6a080fb27b7c67b744adfb5a\",\n            \"bus\": {\n                \"_id\": \"6a080fb27b7c67b744adfae0\",\n                \"busName\": \"Suntharapuram - Vavuniya (3:50)\",\n                \"origin\": \"Suntharapuram\",\n                \"destination\": \"Vavuniya\",\n                \"type\": \"private\",\n                \"route\": {\n                    \"_id\": \"6a080fb27b7c67b744adfacc\",\n                    \"routeName\": \"Mannar Side to Vavuniya Town via University\",\n                    \"direction\": \"fromUniversity\",\n                    \"stops\": [\n                        \"Mannar\",\n                        \"Chekkadipulavu\",\n                        \"Poovarasankulam\",\n                        \"Salambaikulam\",\n                        \"University of Vavuniya\",\n                        \"Pampaimadu Junction\",\n                        \"Nelukkulam\",\n                        \"Veppankulam\",\n                        \"Paddanichoor\",\n                        \"Kurumankadu\",\n                        \"Vavuniya New Bus Stand\"\n                    ]\n                },\n                \"isActive\": true,\n                \"__v\": 0,\n                \"createdAt\": \"2026-05-16T06:33:22.041Z\",\n                \"updatedAt\": \"2026-05-16T06:33:22.041Z\"\n            },\n            \"departureTime\": \"15:50\",\n            \"stopTimes\": [\n                {\n                    \"stop\": \"University of Vavuniya\",\n                    \"time\": \"15:50\",\n                    \"_id\": \"6a080fb27b7c67b744adfb5b\"\n                },\n                {\n                    \"stop\": \"Pampaimadu Junction\",\n                    \"time\": \"15:55\",\n                    \"_id\": \"6a080fb27b7c67b744adfb5c\"\n                },\n                {\n                    \"stop\": \"Nelukkulam\",\n                    \"time\": \"16:00\",\n                    \"_id\": \"6a080fb27b7c67b744adfb5d\"\n                },\n                {\n                    \"stop\": \"Veppankulam\",\n                    \"time\": \"16:05\",\n                    \"_id\": \"6a080fb27b7c67b744adfb5e\"\n                },\n                {\n                    \"stop\": \"Kurumankadu\",\n                    \"time\": \"16:15\",\n                    \"_id\": \"6a080fb27b7c67b744adfb5f\"\n                },\n                {\n                    \"stop\": \"Vavuniya New Bus Stand\",\n                    \"time\": \"16:20\",\n                    \"_id\": \"6a080fb27b7c67b744adfb60\"\n                }\n            ],\n            \"daysOperating\": [\n                \"Monday\",\n                \"Tuesday\",\n                \"Wednesday\",\n                \"Thursday\",\n                \"Friday\"\n            ],\n            \"status\": \"on-time\",\n            \"remarks\": \"\",\n            \"__v\": 0,\n            \"createdAt\": \"2026-05-16T06:33:22.057Z\",\n            \"updatedAt\": \"2026-05-16T06:33:22.057Z\"\n        },\n        {\n            \"_id\": \"6a080fb27b7c67b744adfb61\",\n            \"bus\": {\n                \"_id\": \"6a080fb27b7c67b744adfae1\",\n                \"busName\": \"Mannar - Vavuniya (4:00)\",\n                \"origin\": \"Mannar\",\n                \"destination\": \"Vavuniya\",\n                \"type\": \"private\",\n                \"route\": {\n                    \"_id\": \"6a080fb27b7c67b744adfacc\",\n                    \"routeName\": \"Mannar Side to Vavuniya Town via University\",\n                    \"direction\": \"fromUniversity\",\n                    \"stops\": [\n                        \"Mannar\",\n                        \"Chekkadipulavu\",\n                        \"Poovarasankulam\",\n                        \"Salambaikulam\",\n                        \"University of Vavuniya\",\n                        \"Pampaimadu Junction\",\n                        \"Nelukkulam\",\n                        \"Veppankulam\",\n                        \"Paddanichoor\",\n                        \"Kurumankadu\",\n                        \"Vavuniya New Bus Stand\"\n                    ]\n                },\n                \"isActive\": true,\n                \"__v\": 0,\n                \"createdAt\": \"2026-05-16T06:33:22.041Z\",\n                \"updatedAt\": \"2026-05-16T06:33:22.041Z\"\n            },\n            \"departureTime\": \"16:00\",\n            \"stopTimes\": [\n                {\n                    \"stop\": \"University of Vavuniya\",\n                    \"time\": \"16:00\",\n                    \"_id\": \"6a080fb27b7c67b744adfb62\"\n                },\n                {\n                    \"stop\": \"Pampaimadu Junction\",\n                    \"time\": \"16:05\",\n                    \"_id\": \"6a080fb27b7c67b744adfb63\"\n                },\n                {\n                    \"stop\": \"Nelukkulam\",\n                    \"time\": \"16:10\",\n                    \"_id\": \"6a080fb27b7c67b744adfb64\"\n                },\n                {\n                    \"stop\": \"Veppankulam\",\n                    \"time\": \"16:15\",\n                    \"_id\": \"6a080fb27b7c67b744adfb65\"\n                },\n                {\n                    \"stop\": \"Kurumankadu\",\n                    \"time\": \"16:25\",\n                    \"_id\": \"6a080fb27b7c67b744adfb66\"\n                },\n                {\n                    \"stop\": \"Vavuniya New Bus Stand\",\n                    \"time\": \"16:30\",\n                    \"_id\": \"6a080fb27b7c67b744adfb67\"\n                }\n            ],\n            \"daysOperating\": [\n                \"Monday\",\n                \"Tuesday\",\n                \"Wednesday\",\n                \"Thursday\",\n                \"Friday\"\n            ],\n            \"status\": \"on-time\",\n            \"remarks\": \"\",\n            \"__v\": 0,\n            \"createdAt\": \"2026-05-16T06:33:22.057Z\",\n            \"updatedAt\": \"2026-05-16T06:33:22.057Z\"\n        },\n        {\n            \"_id\": \"6a080fb27b7c67b744adfb68\",\n            \"bus\": {\n                \"_id\": \"6a080fb27b7c67b744adfae2\",\n                \"busName\": \"Cheddikulam - Vavuniya (4:20)\",\n                \"origin\": \"Cheddikulam\",\n                \"destination\": \"Vavuniya\",\n                \"type\": \"government\",\n                \"route\": {\n                    \"_id\": \"6a080fb27b7c67b744adfacc\",\n                    \"routeName\": \"Mannar Side to Vavuniya Town via University\",\n                    \"direction\": \"fromUniversity\",\n                    \"stops\": [\n                        \"Mannar\",\n                        \"Chekkadipulavu\",\n                        \"Poovarasankulam\",\n                        \"Salambaikulam\",\n                        \"University of Vavuniya\",\n                        \"Pampaimadu Junction\",\n                        \"Nelukkulam\",\n                        \"Veppankulam\",\n                        \"Paddanichoor\",\n                        \"Kurumankadu\",\n                        \"Vavuniya New Bus Stand\"\n                    ]\n                },\n                \"isActive\": true,\n                \"__v\": 0,\n                \"createdAt\": \"2026-05-16T06:33:22.041Z\",\n                \"updatedAt\": \"2026-05-16T06:33:22.041Z\"\n            },\n            \"departureTime\": \"16:20\",\n            \"stopTimes\": [\n                {\n                    \"stop\": \"University of Vavuniya\",\n                    \"time\": \"16:20\",\n                    \"_id\": \"6a080fb27b7c67b744adfb69\"\n                },\n                {\n                    \"stop\": \"Pampaimadu Junction\",\n                    \"time\": \"16:25\",\n                    \"_id\": \"6a080fb27b7c67b744adfb6a\"\n                },\n                {\n                    \"stop\": \"Nelukkulam\",\n                    \"time\": \"16:30\",\n                    \"_id\": \"6a080fb27b7c67b744adfb6b\"\n                },\n                {\n                    \"stop\": \"Veppankulam\",\n                    \"time\": \"16:35\",\n                    \"_id\": \"6a080fb27b7c67b744adfb6c\"\n                },\n                {\n                    \"stop\": \"Kurumankadu\",\n                    \"time\": \"16:45\",\n                    \"_id\": \"6a080fb27b7c67b744adfb6d\"\n                },\n                {\n                    \"stop\": \"Vavuniya New Bus Stand\",\n                    \"time\": \"16:50\",\n                    \"_id\": \"6a080fb27b7c67b744adfb6e\"\n                }\n            ],\n            \"daysOperating\": [\n                \"Monday\",\n                \"Tuesday\",\n                \"Wednesday\",\n                \"Thursday\",\n                \"Friday\"\n            ],\n            \"status\": \"on-time\",\n            \"remarks\": \"\",\n            \"__v\": 0,\n            \"createdAt\": \"2026-05-16T06:33:22.057Z\",\n            \"updatedAt\": \"2026-05-16T06:33:22.057Z\"\n        },\n        {\n            \"_id\": \"6a080fb27b7c67b744adfb6f\",\n            \"bus\": {\n                \"_id\": \"6a080fb27b7c67b744adfae3\",\n                \"busName\": \"Mannar - Vavuniya (4:45)\",\n                \"origin\": \"Mannar\",\n                \"destination\": \"Vavuniya\",\n                \"type\": \"private\",\n                \"route\": {\n                    \"_id\": \"6a080fb27b7c67b744adfacc\",\n                    \"routeName\": \"Mannar Side to Vavuniya Town via University\",\n                    \"direction\": \"fromUniversity\",\n                    \"stops\": [\n                        \"Mannar\",\n                        \"Chekkadipulavu\",\n                        \"Poovarasankulam\",\n                        \"Salambaikulam\",\n                        \"University of Vavuniya\",\n                        \"Pampaimadu Junction\",\n                        \"Nelukkulam\",\n                        \"Veppankulam\",\n                        \"Paddanichoor\",\n                        \"Kurumankadu\",\n                        \"Vavuniya New Bus Stand\"\n                    ]\n                },\n                \"isActive\": true,\n                \"__v\": 0,\n                \"createdAt\": \"2026-05-16T06:33:22.041Z\",\n                \"updatedAt\": \"2026-05-16T06:33:22.041Z\"\n            },\n            \"departureTime\": \"16:45\",\n            \"stopTimes\": [\n                {\n                    \"stop\": \"University of Vavuniya\",\n                    \"time\": \"16:45\",\n                    \"_id\": \"6a080fb27b7c67b744adfb70\"\n                },\n                {\n                    \"stop\": \"Pampaimadu Junction\",\n                    \"time\": \"16:50\",\n                    \"_id\": \"6a080fb27b7c67b744adfb71\"\n                },\n                {\n                    \"stop\": \"Nelukkulam\",\n                    \"time\": \"16:55\",\n                    \"_id\": \"6a080fb27b7c67b744adfb72\"\n                },\n                {\n                    \"stop\": \"Veppankulam\",\n                    \"time\": \"17:00\",\n                    \"_id\": \"6a080fb27b7c67b744adfb73\"\n                },\n                {\n                    \"stop\": \"Kurumankadu\",\n                    \"time\": \"17:10\",\n                    \"_id\": \"6a080fb27b7c67b744adfb74\"\n                },\n                {\n                    \"stop\": \"Vavuniya New Bus Stand\",\n                    \"time\": \"17:15\",\n                    \"_id\": \"6a080fb27b7c67b744adfb75\"\n                }\n            ],\n            \"daysOperating\": [\n                \"Monday\",\n                \"Tuesday\",\n                \"Wednesday\",\n                \"Thursday\",\n                \"Friday\"\n            ],\n            \"status\": \"on-time\",\n            \"remarks\": \"\",\n            \"__v\": 0,\n            \"createdAt\": \"2026-05-16T06:33:22.057Z\",\n            \"updatedAt\": \"2026-05-16T06:33:22.057Z\"\n        }\n    ]\n}"
+        }
+      ]
     },
     {
       "name": "Create Bus",
@@ -117,7 +318,79 @@
           ]
         }
       },
-      "response": []
+      "response": [
+        {
+          "name": "Create Bus",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"busName\": \"Test Bus\",\r\n  \"origin\": \"Vavuniya\",\r\n  \"destination\": \"Mannar\",\r\n  \"type\": \"private\",\r\n  \"route\": \"69ff5cb707cd2989094dc3ac\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/buses",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "buses"
+              ]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "http://localhost:5173"
+            },
+            {
+              "key": "Vary",
+              "value": "Origin"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "276"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"114-jrOiD6wEM5emEmqD1xtPiEhNFaY\""
+            },
+            {
+              "key": "Date",
+              "value": "Sat, 16 May 2026 06:50:45 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"data\": {\n        \"busName\": \"Test Bus\",\n        \"origin\": \"Vavuniya\",\n        \"destination\": \"Mannar\",\n        \"type\": \"private\",\n        \"route\": \"69ff5cb707cd2989094dc3ac\",\n        \"isActive\": true,\n        \"_id\": \"6a0813c5b1dc70e798686ed7\",\n        \"createdAt\": \"2026-05-16T06:50:45.698Z\",\n        \"updatedAt\": \"2026-05-16T06:50:45.698Z\",\n        \"__v\": 0\n    }\n}"
+        }
+      ]
     },
     {
       "name": "Update Bus",
@@ -144,7 +417,7 @@
           }
         },
         "url": {
-          "raw": "http://localhost:5000/api/buses/6a0747f53a6beb6c8996a94a",
+          "raw": "http://localhost:5000/api/buses/6a0813c5b1dc70e798686ed7",
           "protocol": "http",
           "host": [
             "localhost"
@@ -153,11 +426,84 @@
           "path": [
             "api",
             "buses",
-            "6a0747f53a6beb6c8996a94a"
+            "6a0813c5b1dc70e798686ed7"
           ]
         }
       },
-      "response": []
+      "response": [
+        {
+          "name": "Update Bus",
+          "originalRequest": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"type\": \"government\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/buses/6a0813c5b1dc70e798686ed7",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "buses",
+                "6a0813c5b1dc70e798686ed7"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "http://localhost:5173"
+            },
+            {
+              "key": "Vary",
+              "value": "Origin"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "279"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"117-V8kmPoU/DIxODXHJnFPndoDWaEU\""
+            },
+            {
+              "key": "Date",
+              "value": "Sat, 16 May 2026 06:51:12 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"data\": {\n        \"_id\": \"6a0813c5b1dc70e798686ed7\",\n        \"busName\": \"Test Bus\",\n        \"origin\": \"Vavuniya\",\n        \"destination\": \"Mannar\",\n        \"type\": \"government\",\n        \"route\": \"69ff5cb707cd2989094dc3ac\",\n        \"isActive\": true,\n        \"createdAt\": \"2026-05-16T06:50:45.698Z\",\n        \"updatedAt\": \"2026-05-16T06:51:12.269Z\",\n        \"__v\": 0\n    }\n}"
+        }
+      ]
     },
     {
       "name": "Delete Bus",
@@ -175,7 +521,7 @@
         "method": "DELETE",
         "header": [],
         "url": {
-          "raw": "http://localhost:5000/api/buses/6a0747f53a6beb6c8996a94a",
+          "raw": "http://localhost:5000/api/buses/6a0813c5b1dc70e798686ed7",
           "protocol": "http",
           "host": [
             "localhost"
@@ -184,11 +530,75 @@
           "path": [
             "api",
             "buses",
-            "6a0747f53a6beb6c8996a94a"
+            "6a0813c5b1dc70e798686ed7"
           ]
         }
       },
-      "response": []
+      "response": [
+        {
+          "name": "Delete Bus",
+          "originalRequest": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/buses/6a0813c5b1dc70e798686ed7",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "buses",
+                "6a0813c5b1dc70e798686ed7"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "http://localhost:5173"
+            },
+            {
+              "key": "Vary",
+              "value": "Origin"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "53"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"35-1qUqk9XCZAQtgahxGunSL71q5iM\""
+            },
+            {
+              "key": "Date",
+              "value": "Sat, 16 May 2026 06:51:23 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Bus deleted successfully\"\n}"
+        }
+      ]
     },
     {
       "name": "Create Schedule",
@@ -227,7 +637,79 @@
           ]
         }
       },
-      "response": []
+      "response": [
+        {
+          "name": "Create Schedule",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"bus\": \"69ff5cb707cd2989094dc3ae\",\r\n  \"departureTime\": \"05:00\",\r\n  \"stopTimes\": [\r\n    { \"stop\": \"Kurumankadu\", \"time\": \"05:10\" },\r\n    { \"stop\": \"Veppankulam\", \"time\": \"05:20\" },\r\n    { \"stop\": \"Nelukkulam\", \"time\": \"05:25\" },\r\n    { \"stop\": \"Pampaimadu Junction\", \"time\": \"05:35\" },\r\n    { \"stop\": \"University of Vavuniya\", \"time\": \"05:40\" }\r\n  ],\r\n  \"daysOperating\": [\"Monday\", \"Tuesday\", \"Wednesday\", \"Thursday\", \"Friday\"],\r\n  \"status\": \"on-time\",\r\n  \"remarks\": \"Early morning special service\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/schedules",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "schedules"
+              ]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "http://localhost:5173"
+            },
+            {
+              "key": "Vary",
+              "value": "Origin"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "718"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"2ce-Em2EMgt69f4NFY0Z2YtOV/wMc24\""
+            },
+            {
+              "key": "Date",
+              "value": "Sat, 16 May 2026 06:51:33 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"data\": {\n        \"bus\": \"69ff5cb707cd2989094dc3ae\",\n        \"departureTime\": \"05:00\",\n        \"stopTimes\": [\n            {\n                \"stop\": \"Kurumankadu\",\n                \"time\": \"05:10\",\n                \"_id\": \"6a0813f5b1dc70e798686ed9\"\n            },\n            {\n                \"stop\": \"Veppankulam\",\n                \"time\": \"05:20\",\n                \"_id\": \"6a0813f5b1dc70e798686eda\"\n            },\n            {\n                \"stop\": \"Nelukkulam\",\n                \"time\": \"05:25\",\n                \"_id\": \"6a0813f5b1dc70e798686edb\"\n            },\n            {\n                \"stop\": \"Pampaimadu Junction\",\n                \"time\": \"05:35\",\n                \"_id\": \"6a0813f5b1dc70e798686edc\"\n            },\n            {\n                \"stop\": \"University of Vavuniya\",\n                \"time\": \"05:40\",\n                \"_id\": \"6a0813f5b1dc70e798686edd\"\n            }\n        ],\n        \"daysOperating\": [\n            \"Monday\",\n            \"Tuesday\",\n            \"Wednesday\",\n            \"Thursday\",\n            \"Friday\"\n        ],\n        \"status\": \"on-time\",\n        \"remarks\": \"Early morning special service\",\n        \"_id\": \"6a0813f5b1dc70e798686ed8\",\n        \"createdAt\": \"2026-05-16T06:51:33.790Z\",\n        \"updatedAt\": \"2026-05-16T06:51:33.790Z\",\n        \"__v\": 0\n    }\n}"
+        }
+      ]
     },
     {
       "name": "Update Schedule",
@@ -254,7 +736,7 @@
           }
         },
         "url": {
-          "raw": "http://localhost:5000/api/schedules/6a07493d3a6beb6c8996a94b",
+          "raw": "http://localhost:5000/api/schedules/6a0813f5b1dc70e798686ed8",
           "protocol": "http",
           "host": [
             "localhost"
@@ -263,11 +745,84 @@
           "path": [
             "api",
             "schedules",
-            "6a07493d3a6beb6c8996a94b"
+            "6a0813f5b1dc70e798686ed8"
           ]
         }
       },
-      "response": []
+      "response": [
+        {
+          "name": "Update Schedule",
+          "originalRequest": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"status\": \"delayed\",\r\n  \"remarks\": \"Delayed due to road work\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/schedules/6a0813f5b1dc70e798686ed8",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "schedules",
+                "6a0813f5b1dc70e798686ed8"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "http://localhost:5173"
+            },
+            {
+              "key": "Vary",
+              "value": "Origin"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "713"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"2c9-GEoE5y9PNyXDx19/3152CmfKAzc\""
+            },
+            {
+              "key": "Date",
+              "value": "Sat, 16 May 2026 06:51:51 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"data\": {\n        \"_id\": \"6a0813f5b1dc70e798686ed8\",\n        \"bus\": \"69ff5cb707cd2989094dc3ae\",\n        \"departureTime\": \"05:00\",\n        \"stopTimes\": [\n            {\n                \"stop\": \"Kurumankadu\",\n                \"time\": \"05:10\",\n                \"_id\": \"6a0813f5b1dc70e798686ed9\"\n            },\n            {\n                \"stop\": \"Veppankulam\",\n                \"time\": \"05:20\",\n                \"_id\": \"6a0813f5b1dc70e798686eda\"\n            },\n            {\n                \"stop\": \"Nelukkulam\",\n                \"time\": \"05:25\",\n                \"_id\": \"6a0813f5b1dc70e798686edb\"\n            },\n            {\n                \"stop\": \"Pampaimadu Junction\",\n                \"time\": \"05:35\",\n                \"_id\": \"6a0813f5b1dc70e798686edc\"\n            },\n            {\n                \"stop\": \"University of Vavuniya\",\n                \"time\": \"05:40\",\n                \"_id\": \"6a0813f5b1dc70e798686edd\"\n            }\n        ],\n        \"daysOperating\": [\n            \"Monday\",\n            \"Tuesday\",\n            \"Wednesday\",\n            \"Thursday\",\n            \"Friday\"\n        ],\n        \"status\": \"delayed\",\n        \"remarks\": \"Delayed due to road work\",\n        \"createdAt\": \"2026-05-16T06:51:33.790Z\",\n        \"updatedAt\": \"2026-05-16T06:51:51.010Z\",\n        \"__v\": 0\n    }\n}"
+        }
+      ]
     },
     {
       "name": "Delete Schedule",
@@ -285,7 +840,7 @@
         "method": "DELETE",
         "header": [],
         "url": {
-          "raw": "http://localhost:5000/api/schedules/6a07493d3a6beb6c8996a94b",
+          "raw": "http://localhost:5000/api/schedules/6a0813f5b1dc70e798686ed8",
           "protocol": "http",
           "host": [
             "localhost"
@@ -294,11 +849,75 @@
           "path": [
             "api",
             "schedules",
-            "6a07493d3a6beb6c8996a94b"
+            "6a0813f5b1dc70e798686ed8"
           ]
         }
       },
-      "response": []
+      "response": [
+        {
+          "name": "Delete Schedule",
+          "originalRequest": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/schedules/6a0813f5b1dc70e798686ed8",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "schedules",
+                "6a0813f5b1dc70e798686ed8"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "http://localhost:5173"
+            },
+            {
+              "key": "Vary",
+              "value": "Origin"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "58"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"3a-eH6BgbOJXRoQM3PGbtFlfFLHOzY\""
+            },
+            {
+              "key": "Date",
+              "value": "Sat, 16 May 2026 06:52:06 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Schedule deleted successfully\"\n}"
+        }
+      ]
     },
     {
       "name": "Create Route",
@@ -337,7 +956,79 @@
           ]
         }
       },
-      "response": []
+      "response": [
+        {
+          "name": "Create Route",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"routeName\": \"Vavuniya to Cheddikulam Direct\",\r\n  \"direction\": \"toUniversity\",\r\n  \"stops\": [\r\n    \"Vavuniya New Bus Stand\",\r\n    \"Cheddikulam\",\r\n    \"University of Vavuniya\"\r\n  ],\r\n  \"description\": \"Direct route from Vavuniya to Cheddikulam\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/routes",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "routes"
+              ]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "http://localhost:5173"
+            },
+            {
+              "key": "Vary",
+              "value": "Origin"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "348"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"15c-aTn8ntYzLOyC94JZ168cwc3IzCc\""
+            },
+            {
+              "key": "Date",
+              "value": "Sat, 16 May 2026 06:52:14 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"data\": {\n        \"routeName\": \"Vavuniya to Cheddikulam Direct\",\n        \"direction\": \"toUniversity\",\n        \"stops\": [\n            \"Vavuniya New Bus Stand\",\n            \"Cheddikulam\",\n            \"University of Vavuniya\"\n        ],\n        \"description\": \"Direct route from Vavuniya to Cheddikulam\",\n        \"_id\": \"6a08141eb1dc70e798686ee8\",\n        \"createdAt\": \"2026-05-16T06:52:14.597Z\",\n        \"updatedAt\": \"2026-05-16T06:52:14.597Z\",\n        \"__v\": 0\n    }\n}"
+        }
+      ]
     },
     {
       "name": "Update Route",
@@ -364,7 +1055,7 @@
           }
         },
         "url": {
-          "raw": "http://localhost:5000/api/routes/6a0749e43a6beb6c8996a95b",
+          "raw": "http://localhost:5000/api/routes/6a08141eb1dc70e798686ee8",
           "protocol": "http",
           "host": [
             "localhost"
@@ -373,11 +1064,84 @@
           "path": [
             "api",
             "routes",
-            "6a0749e43a6beb6c8996a95b"
+            "6a08141eb1dc70e798686ee8"
           ]
         }
       },
-      "response": []
+      "response": [
+        {
+          "name": "Update Route",
+          "originalRequest": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"description\": \"Updated test route\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/routes/6a08141eb1dc70e798686ee8",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "routes",
+                "6a08141eb1dc70e798686ee8"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "http://localhost:5173"
+            },
+            {
+              "key": "Vary",
+              "value": "Origin"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "325"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"145-w05FdM3Mt3XY2TeM0XjKoS+Udt4\""
+            },
+            {
+              "key": "Date",
+              "value": "Sat, 16 May 2026 06:52:31 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"data\": {\n        \"_id\": \"6a08141eb1dc70e798686ee8\",\n        \"routeName\": \"Vavuniya to Cheddikulam Direct\",\n        \"direction\": \"toUniversity\",\n        \"stops\": [\n            \"Vavuniya New Bus Stand\",\n            \"Cheddikulam\",\n            \"University of Vavuniya\"\n        ],\n        \"description\": \"Updated test route\",\n        \"createdAt\": \"2026-05-16T06:52:14.597Z\",\n        \"updatedAt\": \"2026-05-16T06:52:31.111Z\",\n        \"__v\": 0\n    }\n}"
+        }
+      ]
     },
     {
       "name": "Delete Route",
@@ -395,7 +1159,7 @@
         "method": "DELETE",
         "header": [],
         "url": {
-          "raw": "http://localhost:5000/api/routes/6a0749e43a6beb6c8996a95b",
+          "raw": "http://localhost:5000/api/routes/6a08141eb1dc70e798686ee8",
           "protocol": "http",
           "host": [
             "localhost"
@@ -404,11 +1168,75 @@
           "path": [
             "api",
             "routes",
-            "6a0749e43a6beb6c8996a95b"
+            "6a08141eb1dc70e798686ee8"
           ]
         }
       },
-      "response": []
+      "response": [
+        {
+          "name": "Delete Route",
+          "originalRequest": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/routes/6a08141eb1dc70e798686ee8",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "routes",
+                "6a08141eb1dc70e798686ee8"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "http://localhost:5173"
+            },
+            {
+              "key": "Vary",
+              "value": "Origin"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "55"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"37-CmCjMnhnJ7P7z99KWLkkvR+uYT8\""
+            },
+            {
+              "key": "Date",
+              "value": "Sat, 16 May 2026 06:52:44 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Route deleted successfully\"\n}"
+        }
+      ]
     },
     {
       "name": "Register an Admin",
@@ -428,7 +1256,7 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\r\n  \"username\": \"admin\",\r\n  \"password\": \"admin123\",\r\n  \"adminCode\": \"UOVADMIN2026\"\r\n}",
+          "raw": "{\r\n  \"username\": \"admin1\",\r\n  \"password\": \"admin1234\",\r\n  \"adminCode\": \"UOVADMIN2026\"\r\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -449,7 +1277,91 @@
           ]
         }
       },
-      "response": []
+      "response": [
+        {
+          "name": "Register an Admin",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "",
+                "value": "",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"username\": \"admin1\",\r\n  \"password\": \"admin1234\",\r\n  \"adminCode\": \"UOVADMIN2026\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/auth/register",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "auth",
+                "register"
+              ]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "http://localhost:5173"
+            },
+            {
+              "key": "Vary",
+              "value": "Origin"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "236"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"ec-NvEGGDuJ2I8fXtpwEPsHuhzFPoE\""
+            },
+            {
+              "key": "Date",
+              "value": "Sat, 16 May 2026 06:53:05 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"_id\": \"6a081451b1dc70e798686ee9\",\n    \"username\": \"admin1\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMDgxNDUxYjFkYzcwZTc5ODY4NmVlOSIsImlhdCI6MTc3ODkxNDM4NSwiZXhwIjoxNzc5MDAwNzg1fQ.v87oY_IAdCzy--E97cYhhs265ePHQNZKrQCP7JqRrac\"\n}"
+        }
+      ]
     },
     {
       "name": "Login",
@@ -474,7 +1386,7 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\r\n  \"username\": \"admin\",\r\n  \"password\": \"admin123\"\r\n}",
+          "raw": "{\r\n  \"username\": \"admin1\",\r\n  \"password\": \"admin1234\"\r\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -495,7 +1407,86 @@
           ]
         }
       },
-      "response": []
+      "response": [
+        {
+          "name": "Login",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "",
+                "value": "",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"username\": \"admin1\",\r\n  \"password\": \"admin1234\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/auth/login",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "auth",
+                "login"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "http://localhost:5173"
+            },
+            {
+              "key": "Vary",
+              "value": "Origin"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "236"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"ec-MFnVCXe6FidZUhSNlAeWxDpHSyI\""
+            },
+            {
+              "key": "Date",
+              "value": "Sat, 16 May 2026 06:53:19 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"_id\": \"6a081451b1dc70e798686ee9\",\n    \"username\": \"admin1\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMDgxNDUxYjFkYzcwZTc5ODY4NmVlOSIsImlhdCI6MTc3ODkxNDM5OSwiZXhwIjoxNzc5MDAwNzk5fQ.D3bHBE-3PVBdobTIjsj7OBcYpY8bouX8zq_WoPUAmCE\"\n}"
+        }
+      ]
     }
   ]
 }
