@@ -252,7 +252,6 @@ Mannar → Chekkadipu lavu → Poovarasankulam → Salambaikulam → University 
 6. Copy the token and add to Authorization header for protected requests
 7. Test `GET /api/schedules?direction=toUniversity` to see all morning buses
 8. Test `GET /api/schedules?direction=fromUniversity` to see all evening buses
-9. Export collection as JSON for submission
 
 ## **Security Design**
 
