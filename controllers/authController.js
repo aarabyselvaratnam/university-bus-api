@@ -1,5 +1,4 @@
 const User = require("../models/User");
-const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 
 // Generate JWT Token
@@ -23,21 +22,16 @@ exports.register = async (req, res) => {
 
     // Check existing user
     const existingUser = await User.findOne({ username });
-
     if (existingUser) {
       return res.status(400).json({
         message: "Admin already exists",
       });
     }
 
-    // Hash password
-    const salt = await bcrypt.genSalt(10);
-    const hashedPassword = await bcrypt.hash(password, salt);
-
-    // Create user
+    // Create user — password hashing handled by User model pre-save hook
     const user = await User.create({
       username,
-      password: hashedPassword,
+      password,
     });
 
     res.status(201).json({
@@ -59,16 +53,14 @@ exports.login = async (req, res) => {
 
     // Find user
     const user = await User.findOne({ username });
-
     if (!user) {
       return res.status(401).json({
         message: "Invalid username or password",
       });
     }
 
-    // Compare password
-    const isMatch = await bcrypt.compare(password, user.password);
-
+    // Compare password using model method
+    const isMatch = await user.matchPassword(password);
     if (!isMatch) {
       return res.status(401).json({
         message: "Invalid username or password",
